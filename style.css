@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    width: 90%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.brand-header {
+    margin-bottom: 20px;
+}
+
+.domain-name {
+    color: #002d72; /* Görseldeki koyu lacivert tonu */
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.slogan {
+    color: #4a5568;
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-bottom: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0056b3;
+    display: block;
+    padding: 10px;
+    background: #f1f5f9;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.nav-links a:hover {
+    background: #e2e8f0;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.support-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    margin: 20px 0;
+}
+
+.email-link {
+    color: #002d72;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    word-break: break-all; /* Uzun maillerin taşmasını önler */
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
