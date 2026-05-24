@@ -3,115 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mahaza.cloud | Kelime Öğrenmenin Kolay Yolu</title>
+    <title>Mahaza | Kelime Öğrenmenin En Yalın Hali</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: #f8f9fa;
+        :root {
+            --primary: #4f46e5;
+            --primary-light: #eef2ff;
+            --accent: #10b981;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-muted: #64748b;
         }
-        .container {
-            background-color: #ffffff;
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1100px;
+            margin: 2rem auto 4rem auto;
+            padding: 0 2rem;
             text-align: center;
         }
-        .brand-header {
-            margin-bottom: 2rem;
+
+        .badge {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1.5rem;
         }
-        .domain-name {
-            color: #2c3e50;
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: -1px;
+
+        .hero h1 {
+            font-size: 2.8rem;
             font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
         }
-        .slogan {
-            color: #4f46e5; /* Diğer sayfalardaki vurgu rengi */
-            margin-top: 10px;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-        hr {
-            border: 0;
-            border-top: 2px solid #edf2f7;
-            margin: 2rem 0;
-        }
-        h1 {
-            color: #2d3748;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        .description {
-            color: #718096;
-            max-width: 500px;
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
             margin: 0 auto 2.5rem auto;
-            font-size: 1.05rem;
         }
-        .nav-links {
-            list-style: none;
-            padding: 0;
+
+        /* Download Section & QR */
+        .download-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .store-buttons {
             display: flex;
             flex-direction: column;
             gap: 12px;
-            max-width: 300px;
-            margin: 0 auto;
         }
-        .nav-links li a {
-            display: block;
-            padding: 12px 20px;
-            background-color: #ffffff;
-            color: #4f46e5;
+
+        .store-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: #0f172a;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
             text-decoration: none;
-            border: 2px solid #eef2ff;
-            border-radius: 8px;
             font-weight: 600;
             transition: all 0.2s ease;
+            text-align: left;
+            min-width: 200px;
+            border: 1px solid #1e293b;
         }
-        .nav-links li a:hover {
-            background-color: #4f46e5;
-            color: #ffffff;
-            border-color: #4f46e5;
+
+        .store-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+            background-color: #1e293b;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
-        .footer {
-            margin-top: 4rem;
+
+        .store-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .store-btn .btn-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .store-btn .btn-text .top {
+            font-size: 0.75rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .store-btn .btn-text .main {
+            font-size: 1.05rem;
+        }
+
+        .qr-box {
+            background: var(--card-bg);
+            padding: 1.2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            min-width: 140px;
+        }
+
+        .qr-box img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .qr-box span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Languages Supported */
+        .languages {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        .languages span {
+            color: var(--text);
+            background: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin: 0 4px;
             font-size: 0.85rem;
-            color: #a0aec0;
+        }
+
+        /* Features Section */
+        .features-title {
+            text-align: center;
+            margin: 5rem 0 2rem 0;
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 18px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.01);
+            border: 1px solid #edf2f7;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .icon-wrap {
+            width: 44px;
+            height: 44px;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Free Promo Box */
+        .promo-box {
+            max-width: 1060px;
+            margin: 5rem auto;
+            background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+            color: white;
+            padding: 3.5rem 2rem;
+            border-radius: 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
+        }
+
+        .promo-box h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .promo-box p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            padding: 3rem 2rem;
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links li a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.05rem; }
+            .qr-box { display: none; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="brand-header">
-            <h2 class="domain-name">mahaza.cloud</h2>
-            <p class="slogan">The Simple Way to Learn Vocabulary...</p>
-        </div>
+    <header>
+        <div class="logo">mahaza<span>.cloud</span></div>
+    </header>
 
-        <hr>
-
-        <h1>Mobile Application</h1>
-        <p class="description">
-            This website provides legal information, privacy policies, and technical support for our mobile application.
+    <section class="hero">
+        <span class="badge">Uygulamamız Yayında!</span>
+        <h1>Dil Öğrenmenin En Yalın Hali</h1>
+        <p>
+            Yeni bir dil öğrenirken karmaşık gramer kuralları arasında kaybolmaktan sıkıldınız mı? 
+            Mahaza, kelime haznenizi en pratik ve hızlı yoldan geliştirmek için tasarlanmış modern bir kelime öğrenme uygulamasıdır.
         </p>
 
-        <ul class="nav-links">
+        <div class="download-container">
+            <div class="store-buttons">
+                <a href="https://play.google.com/store/apps/details?id=cloud.mahaza.app" class="store-btn" target="_blank">
+                    <svg viewBox="0 0 24 24"><path d="M5,20V4X M19,12L5,20V4L19,12Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3,5.25V18.75L18.25,12L3,5.25Z"/></svg>
+                    <div class="btn-text">
+                        <span class="top">Google Play'den</span>
+                        <span class="main">İNDİRİN</span>
+                    </div>
+                </a>
+                
+                <a href="https://apps.apple.com/tr/app/mahaza/id6769310444?l=tr" class="store-btn" target="_blank">
+                    <svg viewBox="0 0 24 24"><path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.1,16.67C20.08,16.74 19.67,18.11 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.4C14.39,5.48 15.4,4.9 15.97,4.17Z"/></svg>
+                    <div class="btn-text">
+                        <span class="top">App Store'dan</span>
+                        <span class="main">İNDİRİN</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="qr-box">
+                <img src="qr-code.svg" alt="Mahaza QR Code">
+                <span style="font-weight: 700; color: #334155; margin-top: 4px;">Kameranla Tara</span>
+                <span style="font-size: 0.7rem; color: var(--primary); background: var(--primary-light); padding: 2px 8px; border-radius: 12px; font-weight: 600;">iOS & Android</span>
+            </div>
+        </div>
+
+        <div class="languages">
+            Aktif Diller: <span>Arapça</span> <span>İngilizce</span> + Yakında Çok Daha Fazlası!
+        </div>
+    </section>
+
+    <h2 class="features-title">Neden mi Mahaza?</h2>
+
+    <section class="grid">
+        <div class="card">
+            <div class="icon-wrap">⏱️</div>
+            <h3>Kendi Hızında Öğren</h3>
+            <p>Zorunlu görevler veya bitirmen gereken ödevler yok. Ne zaman ve ne kadar istersen o kadar öğrenirsin.</p>
+        </div>
+        <div class="card">
+            <div class="icon-wrap">🎲</div>
+            <h3>Rastgele Kelime Setleri</h3>
+            <p>Her seferinde farklı kelimelerle pratik yap, öğrenme ve test aşamalarıyla bilgilerini pekiştir.</p>
+        </div>
+        <div class="card">
+            <div class="icon-wrap">✈️</div>
+            <h3>Çevrim Dışı Erişim</h3>
+            <p>İnternetiniz olmasa bile kelime ezberi yapmaya devam edin. Haftalık yenilenen 50 kelimelik listelerle her zaman güncel kalın.</p>
+        </div>
+        <div class="card">
+            <div class="icon-wrap">🗣️</div>
+            <h3>Pratik Konuşma</h3>
+            <p>Sadece kelimeleri değil; günlük hayatta sık kullanılan kalıpları, deyimleri, atasözlerini ve lehçe farklarını keşfedin.</p>
+        </div>
+        <div class="card">
+            <div class="icon-wrap">📈</div>
+            <h3>Seviye Odaklı</h3>
+            <p>A1 başlangıç seviyesinden itibaren hedefinize ve seviyenize uygun spesifik kategorilerle çalışmaya başlayın.</p>
+        </div>
+        <div class="card">
+            <div class="icon-wrap">🧠</div>
+            <h3>Öğrenme & Test</h3>
+            <p>Kelimeleri anlamları ve doğru yazılışlarıyla inceleyin. Ardından küçük sınavlarla test ederek hafızanıza kazıyın.</p>
+        </div>
+    </section>
+
+    <section class="promo-box">
+        <h2>Tamamen Ücretsiz!</h2>
+        <p>Mahaza, kaliteli dil eğitimine herkesin kolayca ulaşabilmesi için tamamen ücretsizdir. Kelime öğrenme yolculuğuna bugün başlayın. Sade, hızlı ve etkili!</p>
+    </section>
+
+    <footer>
+        <ul class="footer-links">
             <li><a href="privacy.html">Privacy Policy</a></li>
             <li><a href="terms.html">Terms & Conditions</a></li>
             <li><a href="support.html">Support / Contact</a></li>
         </ul>
-
-        <div class="footer">
+        <div class="copyright">
             &copy; 2026 <strong>mahaza.cloud</strong> - All rights reserved.
         </div>
-    </div>
+    </footer>
 
 </body>
 </html>
