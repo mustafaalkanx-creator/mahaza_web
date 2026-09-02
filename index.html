@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mahaza | Kelime Öğrenmenin Yalın Hali</title>
+
     <style>
         :root {
             --primary: #4f46e5;
@@ -119,7 +121,7 @@
         .store-btn:hover {
             transform: translateY(-2px);
             background-color: #1e293b;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
         }
 
         .store-btn svg {
@@ -147,7 +149,7 @@
             background: var(--card-bg);
             padding: 1.2rem;
             border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
             border: 1px solid #e2e8f0;
             display: flex;
             flex-direction: column;
@@ -176,6 +178,7 @@
             margin-top: 1rem;
             font-weight: 500;
         }
+
         .languages span {
             color: var(--text);
             background: #e2e8f0;
@@ -206,7 +209,9 @@
             background-color: var(--card-bg);
             padding: 2rem;
             border-radius: 18px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01), 0 2px 4px -1px rgba(0,0,0,0.01);
+            box-shadow:
+                0 4px 6px -1px rgba(0, 0, 0, 0.01),
+                0 2px 4px -1px rgba(0, 0, 0, 0.01);
             border: 1px solid #edf2f7;
             transition: transform 0.2s ease;
         }
@@ -245,7 +250,11 @@
         .promo-box {
             max-width: 1060px;
             margin: 5rem auto;
-            background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+            background: linear-gradient(
+                135deg,
+                #4f46e5 0%,
+                #3730a3 100%
+            );
             color: white;
             padding: 3.5rem 2rem;
             border-radius: 24px;
@@ -305,107 +314,317 @@
 
         /* Responsive */
         @media (max-width: 640px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1.05rem; }
-            .qr-box { display: none; }
-            .grid { grid-template-columns: 1fr; }
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .qr-box {
+                display: none;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
 
+    <!-- Header -->
     <header>
         <div class="logo">mahaza<span>.cloud</span></div>
     </header>
 
+
+    <!-- Hero Section -->
     <section class="hero">
+
         <span class="badge">Uygulamamız Yayında!</span>
+
         <h1>Kelime Öğrenmenin Yalın Hali</h1>
-        <p> 
-            Mahaza, kelime haznenizi en pratik ve hızlı yoldan geliştirmek için tasarlanmış modern bir kelime öğrenme uygulamasıdır.
+
+        <p>
+            Mahaza; farklı dillerde kelime haznenizi en pratik, hızlı ve
+            etkili yoldan geliştirmenizi sağlayan modern bir kelime öğrenme
+            uygulamasıdır. İnternet bağlantısına ihtiyaç duymadan,
+            seviyenize uygun kelime setleri ve interaktif pratik
+            modülleriyle öğrenmeye devam edin.
         </p>
 
+
+        <!-- Download Buttons & QR -->
         <div class="download-container">
+
             <div class="store-buttons">
-                <a href="https://play.google.com/store/apps/details?id=cloud.mahaza.app" class="store-btn" target="_blank">
-                    <svg viewBox="0 0 24 24"><path d="M5,20V4X M19,12L5,20V4L19,12Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M3,5.25V18.75L18.25,12L3,5.25Z"/></svg>
+
+                <!-- Google Play -->
+                <a
+                    href="https://play.google.com/store/apps/details?id=cloud.mahaza.app"
+                    class="store-btn"
+                    target="_blank"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M5,20V4X M19,12L5,20V4L19,12Z"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M3,5.25V18.75L18.25,12L3,5.25Z"
+                        />
+                    </svg>
+
                     <div class="btn-text">
                         <span class="top">Google Play'den</span>
                         <span class="main">İNDİRİN</span>
                     </div>
                 </a>
-                
-                <a href="https://apps.apple.com/tr/app/mahaza/id6769310444?l=tr" class="store-btn" target="_blank">
-                    <svg viewBox="0 0 24 24"><path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.1,16.67C20.08,16.74 19.67,18.11 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.4C14.39,5.48 15.4,4.9 15.97,4.17Z"/></svg>
+
+
+                <!-- App Store -->
+                <a
+                    href="https://apps.apple.com/tr/app/mahaza/id6769310444?l=tr"
+                    class="store-btn"
+                    target="_blank"
+                >
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.1,16.67C20.08,16.74 19.67,18.11 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.4C14.39,5.48 15.4,4.9 15.97,4.17Z"
+                        />
+                    </svg>
+
                     <div class="btn-text">
                         <span class="top">App Store'dan</span>
                         <span class="main">İNDİRİN</span>
                     </div>
                 </a>
+
             </div>
 
+
+            <!-- QR Code -->
             <div class="qr-box">
-                <img src="qr-code.svg" alt="Mahaza QR Code">
-                <span style="font-weight: 700; color: #334155; margin-top: 4px;">Kameranla Tara</span>
-                <span style="font-size: 0.7rem; color: var(--primary); background: var(--primary-light); padding: 2px 8px; border-radius: 12px; font-weight: 600;">iOS & Android</span>
+
+                <img
+                    src="qr-code.svg"
+                    alt="Mahaza QR Code"
+                />
+
+                <span
+                    style="
+                        font-weight: 700;
+                        color: #334155;
+                        margin-top: 4px;
+                    "
+                >
+                    Kameranla Tara
+                </span>
+
+                <span
+                    style="
+                        font-size: 0.7rem;
+                        color: var(--primary);
+                        background: var(--primary-light);
+                        padding: 2px 8px;
+                        border-radius: 12px;
+                        font-weight: 600;
+                    "
+                >
+                    iOS & Android
+                </span>
+
             </div>
+
         </div>
 
+
+        <!-- Supported Languages -->
         <div class="languages">
-            Aktif Diller: <span>Arapça</span> <span>İngilizce</span> <span>Almanca</span> + Yakında Çok Daha Fazlası!
+            Aktif Diller:
+            <span>İngilizce</span>
+            <span>Almanca</span>
+            <span>Arapça</span>
+            <span>İspanyolca</span>
+            <span>Fransızca</span>
+            <span>İtalyanca</span>
+            + Daha Fazlası!
         </div>
+
     </section>
 
+
+    <!-- Features -->
     <h2 class="features-title">Neden mi Mahaza?</h2>
 
+
     <section class="grid">
+
+        <!-- Offline -->
+        <div class="card">
+            <div class="icon-wrap">📱</div>
+
+            <h3>%100 Offline</h3>
+
+            <p>
+                İnternet bağlantınız olmasa bile kelime öğrenmeye ve
+                pratik yapmaya kesintisiz devam edin. Seyahatte,
+                metroda veya internetsiz her ortamda Mahaza yanınızda.
+            </p>
+        </div>
+
+
+        <!-- Exercise Modules -->
+        <div class="card">
+            <div class="icon-wrap">🎯</div>
+
+            <h3>Çeşitli Egzersiz Modülleri</h3>
+
+            <p>
+                Kelimeleri sadece ezberlemeyin. Öğren, Eşleştir,
+                Birleştir ve Oluştur gibi farklı pratik modülleriyle
+                bilgilerinizi pekiştirin ve daha kalıcı hale getirin.
+            </p>
+        </div>
+
+
+        <!-- Favorites -->
+        <div class="card">
+            <div class="icon-wrap">⭐</div>
+
+            <h3>Favori Kelime Listeniz</h3>
+
+            <p>
+                Zorlandığınız veya tekrar etmek istediğiniz kelimeleri
+                favorilerinize ekleyin. Kendi özel çalışma listenizi
+                oluşturarak hedeflerinize daha hızlı ulaşın.
+            </p>
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="card">
+            <div class="icon-wrap">📊</div>
+
+            <h3>Detaylı İstatistikler</h3>
+
+            <p>
+                Öğrenme sürecinizi adım adım takip edin. İstatistikler
+                sayesinde kaç kelime öğrendiğinizi ve çalışma
+                başarınızı kolayca görün.
+            </p>
+        </div>
+
+
+        <!-- Multiple Languages -->
+        <div class="card">
+            <div class="icon-wrap">🌍</div>
+
+            <h3>Çoklu Dil Desteği</h3>
+
+            <p>
+                İngilizce, Almanca, Arapça, İspanyolca, İtalyanca,
+                Fransızca, Türkçe, Rusça, Portekizce ve sürekli
+                genişleyen dil seçenekleriyle hedefinizdeki dili öğrenin.
+            </p>
+        </div>
+
+
+        <!-- Other Translations -->
+        <div class="card">
+            <div class="icon-wrap">🔤</div>
+
+            <h3>Diğer Dil Karşılıkları</h3>
+
+            <p>
+                Öğrendiğiniz kelimelerin farklı dillerdeki karşılıklarını
+                anında görüntüleyin. Bir kelimeyi birden fazla dilde
+                karşılaştırarak öğrenmenizi güçlendirin.
+            </p>
+        </div>
+
+
+        <!-- Learn at Your Own Pace -->
         <div class="card">
             <div class="icon-wrap">⏱️</div>
+
             <h3>Kendi Hızında Öğren</h3>
-            <p>Zorunlu görevler veya bitirmen gereken ödevler yok. Ne zaman ve ne kadar istersen o kadar öğrenirsin.</p>
+
+            <p>
+                Zorunlu görevler veya sizi strese sokan sınırlamalar yok.
+                Ne zaman ve ne kadar çalışacağınıza tamamen siz karar verin.
+            </p>
         </div>
+
+
+        <!-- Modern Interface -->
         <div class="card">
-            <div class="icon-wrap">🎲</div>
-            <h3>Rastgele Kelime Setleri</h3>
-            <p>Her seferinde farklı kelimelerle pratik yap, öğrenme ve test aşamalarıyla bilgilerini pekiştir.</p>
+            <div class="icon-wrap">✨</div>
+
+            <h3>Modern ve Sade Arayüz</h3>
+
+            <p>
+                Göz yormayan, karmaşadan uzak ve tamamen öğrenmeye
+                odaklanmanızı sağlayan sade ve şık bir tasarımla
+                kelime öğrenmenin keyfini çıkarın.
+            </p>
         </div>
-        <div class="card">
-            <div class="icon-wrap">✈️</div>
-            <h3>Çevrim Dışı Erişim</h3>
-            <p>İnternetiniz olmasa bile kelime ezberi yapmaya devam edin. Haftalık yenilenen 50 kelimelik listelerle her zaman güncel kalın.</p>
-        </div>
-        <div class="card">
-            <div class="icon-wrap">🗣️</div>
-            <h3>Pratik Konuşma</h3>
-            <p>Sadece kelimeleri değil; günlük hayatta sık kullanılan kalıpları, deyimleri, atasözlerini ve lehçe farklarını keşfedin.</p>
-        </div>
-        <div class="card">
-            <div class="icon-wrap">📈</div>
-            <h3>Seviye Odaklı</h3>
-            <p>A1 başlangıç seviyesinden itibaren hedefinize ve seviyenize uygun spesifik kategorilerle çalışmaya başlayın.</p>
-        </div>
-        <div class="card">
-            <div class="icon-wrap">🧠</div>
-            <h3>Öğrenme & Test</h3>
-            <p>Kelimeleri anlamları ve doğru yazılışlarıyla inceleyin. Ardından küçük sınavlarla test ederek hafızanıza kazıyın.</p>
-        </div>
+
     </section>
 
+
+    <!-- Free Promo -->
     <section class="promo-box">
+
         <h2>Tamamen Ücretsiz!</h2>
-        <p>Mahaza, kaliteli dil eğitimine herkesin kolayca ulaşabilmesi için tamamen ücretsizdir. Kelime öğrenme yolculuğuna bugün başlayın. Sade, hızlı ve etkili!</p>
+
+        <p>
+            Mahaza, kaliteli dil eğitimine herkesin kolayca
+            ulaşabilmesi için tamamen ücretsizdir.
+            Kelime öğrenme yolculuğunuza bugün başlayın.
+            Sade, hızlı ve etkili!
+        </p>
+
     </section>
 
+
+    <!-- Footer -->
     <footer>
+
         <ul class="footer-links">
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms & Conditions</a></li>
-            <li><a href="support.html">Support / Contact</a></li>
+
+            <li>
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+            </li>
+
+            <li>
+                <a href="terms.html">
+                    Terms & Conditions
+                </a>
+            </li>
+
+            <li>
+                <a href="support.html">
+                    Support / Contact
+                </a>
+            </li>
+
         </ul>
+
         <div class="copyright">
             &copy; 2026 <strong>mahaza.cloud</strong> - All rights reserved.
         </div>
+
     </footer>
 
 </body>
 </html>
+```
